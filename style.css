@@ -3,3 +3,14 @@
     margin: 0;
     padding: 0;
 }
+ul{
+    display: inline;
+}
+li{
+    float: left;
+}
+a{
+    display: block;
+    padding: 8x;
+    background-color: #dddddd;
+}
