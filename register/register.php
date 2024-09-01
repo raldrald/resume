@@ -41,22 +41,31 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../register/register-style.css">
         <title>Register</title>
     </head>
     <body>
 
             <div class="container">
-                <form action="" method="post" autocomplete="off" enctype="multipart/form-data">
+                <form action="" method="post" autocomplete="off">
                     <div class="signup">
+
+                        <div class="form-group">
                         <label for="email"> Email: </label>
                         <input type="email" name="email" id="email" placeholder="Email"><br>
+                        </div>
 
+                        <div class="form-group">
                         <label for="email"> Password: </label>
                         <input type="password" name="password" id="password" placeholder="Password"><br>
+                        </div>
 
+                        <div class="form-group">
                         <label for="email"> Confirm Password: </label>
                         <input type="password" name="confirmpassword" id="confirmpasswor" placeholder="Confirm Password"><br>
+                        </div>
                     </div>
+                    
                     <div class="button">
                         <button type="submit" name="submit">Register</button>
                         <button ><a href="login.php">Go Back</a></button>
