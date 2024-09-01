@@ -6,7 +6,7 @@
 body{
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(to bottom right, #ff9482, #7d77ff);
+    background-image: linear-gradient(to top right, #b5e070, #7eae77);
     align-items: center;
     height: 100vh;
     
@@ -19,9 +19,10 @@ body{
    width: 300px;
    margin: 0 auto;
    padding: 20px;
-   border: 1px solid #ccc;
+   border: 5px solid #ccc;
    border-radius: 10px;
-   background-color: #d8e5f7;
+   box-shadow: 10px 10px;
+   background-image: linear-gradient(to top right, #b5e070, #7eae77);
 }
 .signup{
     display: flex;
@@ -45,19 +46,20 @@ input{
 }
 .button{
     padding: 10px 15px;
-    
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    border: none;
     
 }
 .button button a{
-    
-    text-decoration: none;
-    
+    text-decoration: none; 
 }
-.button button:hover{
-    background-color: #45a049;
+.button button a:hover{
+    color: inherit
+}
+button:hover{
+    background-color: lightblue;
 }
 button{
     margin-left: 20px;
@@ -66,4 +68,11 @@ button{
 }
 a{
     color: black;
+}
+a:hover{
+        color: inherit
+
+}
+.button a:hover{
+    color: azure;
 }

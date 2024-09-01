@@ -6,6 +6,9 @@
             $password =$_POST['password'];
             $confirmpassword = $_POST['confirmpassword'];
 
+            if (empty($email) || empty($password) || empty($confirmpassword)) {
+                echo "<script>alert('Please fill in all fields.')</script>";
+            } else {
             $sql = "SELECT * FROM tb_register WHERE email = '$email'";
             $result = mysqli_query($conn,$sql);
 
@@ -28,6 +31,7 @@
             }
 
             }
+        }
              
 
         
@@ -53,17 +57,17 @@
 
                         <div class="form-group">
                         <label for="email"> Email </label>
-                        <input type="email" name="email" id="email" placeholder="Email" required><br>
+                        <input type="email" name="email" id="email" placeholder="Email"><br>
                         </div>
 
                         <div class="form-group">
                         <label for="email"> Password </label>
-                        <input type="password" name="password" id="password" placeholder="Password" required><br>
+                        <input type="password" name="password" id="password" placeholder="Password"><br>
                         </div>
 
                         <div class="form-group">
                         <label for="email"> Confirm Password </label>
-                        <input type="password" name="confirmpassword" id="confirmpasswor" placeholder="Confirm Password" required><br>
+                        <input type="password" name="confirmpassword" id="confirmpasswor" placeholder="Confirm Password"><br>
                         </div>
                     </div>
                     
