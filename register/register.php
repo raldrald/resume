@@ -11,6 +11,8 @@
 
             if($result -> num_rows >0){
                 echo "<script>alert('Email Already Taken')</script>";
+            }
+            else{
                 if($password == $confirmpassword){
                     $query = "INSERT INTO tb_user (email,password,confirmpassword) VALUES ('$email','$password','$confirmpassword')";
                     if(mysqli_query($conn,$query)){
@@ -20,12 +22,17 @@
                         echo "<script>alert('Fail Register')</script>";
                     }
                 }
-            }
-            else{
-                echo "<script>alert('Error')</script>";
+                else{
+                    echo "<script>alert('ERROR')</script>";
+                }
             }
 
-        }
+            }
+             
+
+        
+
+    
 ?>
 
 
