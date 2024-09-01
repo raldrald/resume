@@ -1,3 +1,34 @@
+<?php
+    require '../config.php';
+
+        if(isset($_POST['submit'])){
+            $email = $_POST['email'];
+            $password =$_POST['password'];
+            $confirmpassword = $_POST['confirmpassword'];
+
+            $sql = "SELECT * FROM tb_register WHERE email = '$email'";
+            $result = mysqli_query($conn,$sql);
+
+            if($result -> num_rows >0){
+                echo "<script>alert('Email Already Taken')</script>";
+                if($password == $confirmpassword){
+                    $query = "INSERT INTO tb_user (email,password,confirmpassword) VALUES ('$email','$password','$confirmpassword')";
+                    if(mysqli_query($conn,$query)){
+                      echo "<script>alert('Register Account')</script>";
+                    }
+                    else{
+                        echo "<script>alert('Fail Register')</script>";
+                    }
+                }
+            }
+            else{
+                echo "<script>alert('Error')</script>";
+            }
+
+        }
+?>
+
+
 <!DOCTYPE html>
     <html lang="en">
     <head>
