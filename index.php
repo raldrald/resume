@@ -9,9 +9,9 @@
     <body>
         <div class="navbar">
             <ul>
-                <li><a href="home.php">Home</a></li>
+                <li><a href="../resume/home/home.php">Home</a></li>
                 <li><a href="about.php">About Me</a></li>
-                <li><a href="services.php">Services</a></li>
+                <li><a href="services.php">Setting</a></li>
                 <li><a href="contacts.php">Contact</a></li>
             </ul>
         </div>
