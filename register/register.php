@@ -45,24 +45,25 @@
         <title>Register</title>
     </head>
     <body>
-
             <div class="container">
                 <form action="" method="post" autocomplete="off">
+                <div class="header"><h1>Register</h1></div>
+
                     <div class="signup">
 
                         <div class="form-group">
-                        <label for="email"> Email: </label>
-                        <input type="email" name="email" id="email" placeholder="Email"><br>
+                        <label for="email"> Email </label>
+                        <input type="email" name="email" id="email" placeholder="Email" required><br>
                         </div>
 
                         <div class="form-group">
-                        <label for="email"> Password: </label>
-                        <input type="password" name="password" id="password" placeholder="Password"><br>
+                        <label for="email"> Password </label>
+                        <input type="password" name="password" id="password" placeholder="Password" required><br>
                         </div>
 
                         <div class="form-group">
-                        <label for="email"> Confirm Password: </label>
-                        <input type="password" name="confirmpassword" id="confirmpasswor" placeholder="Confirm Password"><br>
+                        <label for="email"> Confirm Password </label>
+                        <input type="password" name="confirmpassword" id="confirmpasswor" placeholder="Confirm Password" required><br>
                         </div>
                     </div>
                     
