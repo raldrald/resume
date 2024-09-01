@@ -2,6 +2,7 @@
     require '../config.php';
 
         if(isset($_POST['submit'])){
+
             $email = $_POST['email'];
             $password = $_POST['password'];
 
@@ -16,7 +17,7 @@
                     if($password == $row['password']){
                         $_SESSION['login']=true;
                         $_SESSION['id'] = $row['id'];
-                        header('Location: ../home/home.page');
+                        header('Location: ../home/home.page?id='.$row['id'].'');
                     }
                     else{
                         echo "<script>alert('ERROR')</script>";
