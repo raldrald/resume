@@ -14,7 +14,7 @@
             }
             else{
                 if($password == $confirmpassword){
-                    $query = "INSERT INTO tb_user (email,password,confirmpassword) VALUES ('$email','$password','$confirmpassword')";
+                    $query = "INSERT INTO tb_register (email,password,confirmpassword) VALUES ('$email','$password','$confirmpassword')";
                     if(mysqli_query($conn,$query)){
                       echo "<script>alert('Register Account')</script>";
                     }
