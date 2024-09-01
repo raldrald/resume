@@ -51,7 +51,7 @@
                         <input type="password" name="confirmpassword" id="confirmpasswor" placeholder="Confirm Password"><br>
                     </div>
                     <div class="button">
-                        <button type="submit">Register</button>
+                        <button type="submit" name="submit">Register</button>
                         <button ><a href="login.php">Go Back</a></button>
                     </div>
                     
