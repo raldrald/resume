@@ -39,6 +39,9 @@
         <div class="container">
             <form action="" method="post">
                 <div class="login">
+                    <div class="header">
+                        <h1>Login</h1>
+                    </div>
                     <div class="form-group">
                          <label for="email">Email</label>
                          <input type="text" name="email" id="email" placeholder="Email">
@@ -50,10 +53,10 @@
                     </div>
 
                     <div class="login-button">
-                        <button type="submit" name="submit">Login</button>
+                        <button type="submit" name="submit">Sign In</button>
                     </div>
                     <div class="register-link">
-                        <a href="../register/register.php">Sign Up?</a>
+                       Don`t have an account? <a href="../register/register.php"> Register</a>
                     </div>
                 </div>
             </form>
