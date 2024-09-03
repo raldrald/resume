@@ -1,0 +1,80 @@
+/* body{
+   
+
+} */
+.container{
+    display: flex;
+    margin-left: 135px;
+    margin-top: 25px;
+    width: 1200px;
+    height: 600px;
+    border: 2px solid black;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 20px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+
+}
+
+
+.profilepic{
+    margin: 20px 20px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+}
+.name{
+    margin: 30px 20px 10px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+    height: 32px;
+    width: 300px;
+    border-bottom: 2px solid black ;
+
+}
+.course{
+    margin: 20px 20px 10px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+    height: 32px;
+    width: 300px;
+    border-bottom: 2px solid black ;
+}
+
+.address{
+    margin: 20px 20px 10px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+    height: 24px;
+    width: 300px;
+    border-bottom: 2px solid black ;
+}
+.email{
+    margin: 20px 20px 10px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+    height: 24px;
+    width: 300px;
+    border-bottom: 2px solid black ;
+}
+.number{
+    margin: 20px 20px 10px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+    height: 24px;
+    width: 300px;
+    border-bottom: 2px solid black ;
+}
