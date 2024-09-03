@@ -13,6 +13,28 @@
     <title>Document</title>
 </head>
 <body>
-        <?php include "../index.php";?>
+        <div class="navbar">
+          <?php include "../index.php";?>
+        </div>
+            <div class="profilepic">
+
+            </div>
+
+            <div class="info">
+
+            </div>
+            <div class="objective">
+
+            </div>
+            <div class="skill">
+
+            </div>
+            <div class="personal-info">
+
+            </div>
+            <div class="school">
+
+            </div>
+            
 </body>
 </html>
