@@ -24,7 +24,7 @@
 
             </div>  
         <div class="info">
-                <p>name</p>
+                <p>name``1</p>
                 <p>course</p>
                 <p>address</p>
                 <p>email</p>
