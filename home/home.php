@@ -24,12 +24,11 @@
 
             </div>  
         <div class="info">
-                <p>name``1</p>
+                <p>name1</p>
                 <p>course</p>
                 <p>address</p>
                 <p>email</p>
                 <p>number</p>
-       
             </div>
 
             <div class="objective">
