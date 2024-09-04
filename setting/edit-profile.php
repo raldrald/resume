@@ -49,27 +49,28 @@
                     </div>
                     </div>
                     </div>
-                    <div class="skills">
+                  
                     <div class="form-group"> 
+                 
                         <label for="skill">Skills</label>
                         <input type="text" name="skill1" id="skill1"  class="skill1" placeholder="Skill Number 1">
-                        <input type="text" name="skill2" id="skill2" placeholder="Skill Number 2">
-                        <input type="text" name="skill3" id="skill3" placeholder="Skill Number 3">
-                        <input type="text" name="skill4" id="skill4" placeholder="Skill Number 4">
-                        <input type="text" name="skill5" id="skill5" placeholder="Skill Number 5">
+                        <input type="text" name="skill2" id="skill2" class="skill2" placeholder="Skill Number 2">
+                        <input type="text" name="skill3" id="skill3" class="skill3" placeholder="Skill Number 3">
+                        <input type="text" name="skill4" id="skill4" class="skill4" placeholder="Skill Number 4">
+                        <input type="text" name="skill5" id="skill5" class="skill5" placeholder="Skill Number 5">
                     </div>
-                    </div>
+            
 
                     <div class="form-group">
                         <label for="school">School</label>
-                        <input type="text" name="school" id="school" placeholder="Elementary School">
-                        <input type="text" name="school1" id="school1" placeholder="Junior High School">
-                        <input type="text" name="school2" id="school2" placeholder="Senior High School">
-                        <input type="text" name="school3" id="school3" placeholder="College">
+                        <input type="text" name="school" id="school" class="elementary" placeholder="Elementary School">
+                        <input type="text" name="school1" id="school1" class="junior" placeholder="Junior High School">
+                        <input type="text" name="school2" id="school2" class="senior" placeholder="Senior High School">
+                        <input type="text" name="school3" id="school3" class="college" placeholder="College">
                     </div>
                     <div class="form-group">
                         <label for="objective">Objective</label>
-                        <input type="text" name="objective" id="objective" placeholder="Objective">
+                        <textarea  name="objective" id="objective" class="objective" placeholder="Objective" ></textarea>
                     </div>
 
                     <button type="submit" name="submit">Submit</button>
