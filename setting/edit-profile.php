@@ -49,13 +49,15 @@
                     </div>
                     </div>
                     </div>
-                    <div class="form-group">
+                    <div class="skills">
+                    <div class="form-group"> 
                         <label for="skill">Skills</label>
-                        <input type="text" name="skill1" id="skill1" placeholder="Skill Number 1">
+                        <input type="text" name="skill1" id="skill1"  class="skill1" placeholder="Skill Number 1">
                         <input type="text" name="skill2" id="skill2" placeholder="Skill Number 2">
                         <input type="text" name="skill3" id="skill3" placeholder="Skill Number 3">
                         <input type="text" name="skill4" id="skill4" placeholder="Skill Number 4">
                         <input type="text" name="skill5" id="skill5" placeholder="Skill Number 5">
+                    </div>
                     </div>
 
                     <div class="form-group">
@@ -69,6 +71,8 @@
                         <label for="objective">Objective</label>
                         <input type="text" name="objective" id="objective" placeholder="Objective">
                     </div>
+
+                    <button type="submit" name="submit">Submit</button>
                 
                 
             </form>

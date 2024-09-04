@@ -42,15 +42,19 @@ body{
  
  label{
     margin-left: 40px;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     font-weight: bold;
  }
  input{
     margin-left: 30px;
+    margin-bottom: 30px;
     width: 300px;
     max-width: 400px;
     padding: 10px;
     font-size: 15px;
     border-radius: 20px;
-    transition: width 1s;
  }
+.skill{
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
