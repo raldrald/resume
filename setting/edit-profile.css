@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+}
+.container{
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin-top: 330px;
+    padding: 20px;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 10px 10px;
+    background-image: linear-gradient(to top right, #b5e070, #7eae77);
+    gap: 20;
+ }
+ .profile {
+    width: 300px;
+    display: flex;   
+    flex-direction: column;
+    gap: 7px;
+    position: relative;
+    margin-bottom: 20px;
+ }
+ .personal-info{
+    position:absolute;
+    left: 500px;
+    width: 300px;
+    top: 68px;
+    gap: 7px;
+ }
+ .form-group{
+    display: flex;
+    flex-direction: column;
+ }
+ 
+ label{
+    margin-left: 40px;
+    margin-bottom: 5px;
+    font-weight: bold;
+ }
+ input{
+    margin-left: 30px;
+    width: 300px;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 20px;
+    transition: width 1s;
+ }
