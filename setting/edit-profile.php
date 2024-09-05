@@ -16,9 +16,13 @@
                         <input type="file" name="profilepic" id="profilepic"  class="profilepic" placeholder="Profile Picture" accept=".jpg, .jpeg, .png">
                     </div>
                     <div class="form-group">
-                        <label for="background" class="lbackground">background Picture</label>
+                        <label for="background" class="lbackground">Background Picture</label>
                         <input type="file" name="background" id="background"  class="background" placeholder="background" accept=".jpg, .jpeg, .png">
                     </div>
+                    </div>
+
+                    <div class="hpersonal">
+                        <h2>Personal Information</h2>
                     </div>
 
                     <div class="personal-info">
@@ -45,30 +49,42 @@
                         <input type="text" name="gender" id="gender" class="gender" placeholder="Gender">
                     </div>
                     </div>
-                  
-                  
-                    <div class="form-group"> 
-                 
-                        <label for="skill">Skills</label>
-                        <input type="text" name="skill1" id="skill1"  class="skill1" placeholder="Skill Number 1">
+
+                    <div class="hskill">
+                    <h2>Skills</h2>
+                    </div>
+
+                    <div class="skill">
+                        <div class="form-group"> 
+                        <input type="text" name="skill" id="skill"  class="skill1" placeholder="Skill Number 1">
                         <input type="text" name="skill2" id="skill2" class="skill2" placeholder="Skill Number 2">
                         <input type="text" name="skill3" id="skill3" class="skill3" placeholder="Skill Number 3">
-                        
+                      </div>
+                      <div class="form-group"> 
                         <input type="text" name="skill4" id="skill4" class="skill4" placeholder="Skill Number 4">
                         <input type="text" name="skill5" id="skill5" class="skill5" placeholder="Skill Number 5">
-
+                        </div>
                     </div>
-            
+              
+                    <div class="hschool">
+                        <h2>Education Background</h2>
+                    </div>     
 
+                    <div class="school">
                     <div class="form-group">
-                        <label for="school">School</label>
                         <input type="text" name="school" id="school" class="elementary" placeholder="Elementary School">
                         <input type="text" name="school1" id="school1" class="junior" placeholder="Junior High School">
+                        </div>
+                    <div class="form-group">   
                         <input type="text" name="school2" id="school2" class="senior" placeholder="Senior High School">
                         <input type="text" name="school3" id="school3" class="college" placeholder="College">
                     </div>
+                    </div>
+
+                    <div class="hobjective">
+                        <h2>Objective</h2>
+                    </div>
                     <div class="form-group">
-                        <label for="objective" class="lobjective">Objective</label>
                         <textarea  name="objective" id="objective" class="objective" placeholder="Objective" ></textarea>
                     </div>
 
