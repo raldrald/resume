@@ -15,6 +15,10 @@
                         <input type="file" name="profilepic" id="profilepic"  class="profilepic" placeholder="Profile Picture" accept=".jpg, .jpeg, .png">
                     </div>
                     <div class="form-group">
+                        <label for="background" class="lbackground">background Picture</label>
+                        <input type="file" name="background" id="background"  class="background" placeholder="background" accept=".jpg, .jpeg, .png">
+                    </div>
+                    <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" name="name" id="name" class="name" placeholder="Name">
                     </div>
