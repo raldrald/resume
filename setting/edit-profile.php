@@ -69,7 +69,7 @@
                         <input type="text" name="school3" id="school3" class="college" placeholder="College">
                     </div>
                     <div class="form-group">
-                        <label for="objective">Objective</label>
+                        <label for="objective" class="lobjective">Objective</label>
                         <textarea  name="objective" id="objective" class="objective" placeholder="Objective" ></textarea>
                     </div>
 
