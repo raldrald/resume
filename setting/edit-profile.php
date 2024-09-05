@@ -9,7 +9,8 @@
 <body>
         <div class="container">
             <form action="update-process" method="post" enctype="multipart/form-data">
-                <div class="profile">
+              
+                    <div class="profilepic">
                     <div class="form-group">
                         <label for="profilepic" class="lprofilepic">Profile Picture</label>
                         <input type="file" name="profilepic" id="profilepic"  class="profilepic" placeholder="Profile Picture" accept=".jpg, .jpeg, .png">
@@ -18,36 +19,28 @@
                         <label for="background" class="lbackground">background Picture</label>
                         <input type="file" name="background" id="background"  class="background" placeholder="background" accept=".jpg, .jpeg, .png">
                     </div>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" class="name" placeholder="Name">
                     </div>
-                    <div class="form-group">
-                        <label for="course">Course</label>
-                        <input type="text" name="course" id="course" class="course" placeholder="Course">
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Address</label>
-                        <input type="text" name="address" id="address" class="address" placeholder="Address">
-                    </div>
-                    <div class="form-group">
-                        <label for="number">Phone Number</label>
-                        <input type="number" name="number" id="number" class="phone" placeholder="Phone Number">
-                    </div>
+
                     <div class="personal-info">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" class="name" placeholder="Name">
+                            <label for="course">Course</label>
+                            <input type="text" name="course" id="course" class="course" placeholder="Course">
+                            <label for="address">Address</label>
+                            <input type="text" name="address" id="address" class="address" placeholder="Address">
+                            <label for="number">Phone Number</label>
+                            <input type="number" name="number" id="number" class="phone" placeholder="Phone Number">
+                         </div>
                     <div class="form-group">
                         <label for="age" class="lage">Age</label>
                         <input type="number" name="age" id="age" class="age" placeholder="Age">
-                    </div>
-                    <div class="form-group">
+                    
                         <label for="birthday" class="lbday">Date of Birth</label>
                         <input type="date" name="birthday" id="birthday" class="bday" placeholder="Date of Birth">
-                    </div>
-                    <div class="form-group">
+              
                         <label for="placeofbirth" class="lpbirth">Place Of Birth</label>
                         <input type="text" name="placeofbirth" id="placeofbirth" class="pbirth" placeholder="Place of Birth">
-                    </div>
-                    <div class="form-group">
                         <label for="gender" class="lgender">Gender</label>
                         <input type="text" name="gender" id="gender" class="gender" placeholder="Gender">
                     </div>
@@ -60,8 +53,10 @@
                         <input type="text" name="skill1" id="skill1"  class="skill1" placeholder="Skill Number 1">
                         <input type="text" name="skill2" id="skill2" class="skill2" placeholder="Skill Number 2">
                         <input type="text" name="skill3" id="skill3" class="skill3" placeholder="Skill Number 3">
+                        
                         <input type="text" name="skill4" id="skill4" class="skill4" placeholder="Skill Number 4">
                         <input type="text" name="skill5" id="skill5" class="skill5" placeholder="Skill Number 5">
+
                     </div>
             
 
@@ -78,7 +73,7 @@
                     </div>
 
                     <button type="submit" name="submit">Submit</button>
-                    </div>
+                
                 
             </form>
         </div>
