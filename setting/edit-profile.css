@@ -33,11 +33,11 @@ body{
    justify-content: space-between;
  }
  .lage, .lbday, .lpbirth, .lgender{
-   margin-bottom: 7px;
+   margin-bottom: 5gipx;
 } 
 
 .age, .bday, .pbirth, .gender{
-   margin-bottom: 7px;
+   margin-bottom: 5px;
    width: 1000px;
 }
 .name, .address, .course, .phone{
