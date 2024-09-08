@@ -11,8 +11,8 @@
             $background = $_FILES['background']['name'];
             $background_tmp = $_FILES['background']['tmp_name'];
 
-            $profilepic_folder = '../images'.$profilepic;
-            $background_folder = '../images'.$background;
+            $profilepic_folder = '../images/'.$profilepic;
+            $background_folder = '../images/'.$background;
 
             move_uploaded_file($profilepic_tmp,$profilepic_folder);
             move_uploaded_file($background_folder,$background_tmp);
