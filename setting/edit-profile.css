@@ -39,7 +39,7 @@ body{
 .age, .bday, .pbirth, .gender{
    width: 1000px;
 }
-.name, .address, .course, .phone{
+.fullname, .address, .course, .phone{
    width: 1000px;
 } 
  .form-group{

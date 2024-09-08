@@ -2,6 +2,7 @@
     require '../config.php';
 
         if(isset($_POST['submit'])){
+          
             $email = $_POST['email'];
             $password =$_POST['password'];
             $confirmpassword = $_POST['confirmpassword'];
@@ -19,7 +20,9 @@
                 if($password == $confirmpassword){
                     $query = "INSERT INTO tb_register (email,password,confirmpassword) VALUES ('$email','$password','$confirmpassword')";
                     if(mysqli_query($conn,$query)){
-                      echo "<script>alert('Register Account')</script>";
+                        $register_id = mysqli_insert_id($conn);
+                        $_SESSION['register_id'] = $register_id;
+                        echo "<script>alert('Register Account with ID: $register_id')</script>";;
                     }
                     else{
                         echo "<script>alert('Fail Register')</script>";
@@ -73,7 +76,7 @@
                     
                     <div class="button">
                         <button type="submit" name="submit">Register</button>
-                        <button ><a href="login.php">Go Back</a></button>
+                        <button ><a href="../login/login.php">Go Back</a></button>
                     </div>
                     
                 </form>

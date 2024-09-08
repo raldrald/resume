@@ -17,7 +17,7 @@
                     if($password == $row['password']){
                         $_SESSION['login']=true;
                         $_SESSION['id'] = $row['id'];
-                        header('Location: ../home/home.page?id='.$row['id'].'');
+                        header('Location: ../home/home.php?id='.$row['id'].'');
                     }
                     else{
                         echo "<script>alert('ERROR')</script>";
@@ -25,6 +25,7 @@
             }
         }
 ?>
+
 
 
 <!DOCTYPE html>

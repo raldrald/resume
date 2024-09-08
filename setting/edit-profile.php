@@ -1,3 +1,64 @@
+<?php
+    require '../config.php';
+
+        if(isset($_POST['submit'])){
+           
+
+            $profilepic = $_FILES['profilepic']['name'];
+            $profilepic_tmp = $_FILES['profilepic']['tmp_name'];
+
+
+            $background = $_FILES['background']['name'];
+            $background_tmp = $_FILES['background']['tmp_name'];
+
+            $profilepic_folder = '../images'.$profilepic;
+            $background_folder = '../images'.$background;
+
+            move_uploaded_file($profilepic_tmp,$profilepic_folder);
+            move_uploaded_file($background_folder,$background_tmp);
+
+
+            $fullname=$_POST['fullname'];
+            $course = $_POST['course'];
+            $address = $_POST['address'];
+            $phonenumber = $_POST['phonenumber'];
+            $age = $_POST['age'];
+            $birthday = $_POST['birthday'];
+            $placeofbirth = $_POST['placeofbirth'];
+            $gender = $_POST['gender'];
+            $skill1 = $_POST['skill1'];
+            $skill2 = $_POST['skill2'];
+            $skill3 = $_POST['skill3'];
+            $skill4 = $_POST['skill4'];
+            $skill5 =$_POST['skill5'];
+            $elementary=$_POST['elementary'];
+            $junior = $_POST['junior'];
+            $senior =$_POST['senior'];
+            $college = $_POST['college'];
+            $objective =$_POST['objective'];
+
+            if(empty($fullname) || empty($course) || empty($address)){
+                echo "<script>alert('Name, Course and Address Are Empty')</scirpt>";
+            }
+            else{
+                $sql = "INSERT INTO tb_account (profilepic,background,fullname,course,address,phonenumber,age,birthday,placeofbirth,gender,skill1,skill2,skill3,skill4,skill5,elementary,junior,senior,college,objective) values
+                  ('$profilepic','$background','$fullname','$course','$address','$phonenumber','$age','$birthday','$placeofbirth','$gender','$skill1','$skill2','$skill3','$skill4','$skill5','$elementary','$junior','$senior','$college','$objective')";
+                $result = mysqli_query($conn,$sql);
+
+                    if($result === true){
+                        echo "<script>alert('Create New Record')</script>";
+                    }
+                    else{
+                        echo "<script>alert('Error')</scirpt>";
+                    }
+            }
+        }
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +69,7 @@
 </head>
 <body>
         <div class="container">
-            <form action="update-process" method="post" enctype="multipart/form-data">
+            <form action="" method="post" enctype="multipart/form-data">
               
                     <div class="profilepic">
                     <div class="form-group">
@@ -27,14 +88,14 @@
 
                     <div class="personal-info">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" class="name" placeholder="Name">
+                            <label for="name">Full Name</label>
+                            <input type="text" name="fullname" id="fullname" class="fullname" placeholder="Full Name">
                             <label for="course">Course</label>
                             <input type="text" name="course" id="course" class="course" placeholder="Course">
                             <label for="address">Address</label>
                             <input type="text" name="address" id="address" class="address" placeholder="Address">
                             <label for="number">Phone Number</label>
-                            <input type="number" name="number" id="number" class="phone" placeholder="Phone Number">
+                            <input type="number" name="phonenumber" id="phonenumber" class="phone" placeholder="Phone Number">
                          </div>
                     <div class="form-group">
                         <label for="age" class="lage">Age</label>
@@ -56,7 +117,7 @@
 
                     <div class="skill">
                         <div class="form-group"> 
-                        <input type="text" name="skill" id="skill"  class="skill1" placeholder="Skill Number 1">
+                        <input type="text" name="skill1" id="skill1"  class="skill1" placeholder="Skill Number 1">
                         <input type="text" name="skill2" id="skill2" class="skill2" placeholder="Skill Number 2">
                         <input type="text" name="skill3" id="skill3" class="skill3" placeholder="Skill Number 3">
                       </div>
@@ -72,12 +133,12 @@
 
                     <div class="school">
                     <div class="form-group">
-                        <input type="text" name="school" id="school" class="elementary" placeholder="Elementary School">
-                        <input type="text" name="school1" id="school1" class="junior" placeholder="Junior High School">
+                        <input type="text" name="elementary" id="elementary" class="elementary" placeholder="Elementary School">
+                        <input type="text" name="junior" id="junior" class="junior" placeholder="Junior High School">
                         </div>
                     <div class="form-group">   
-                        <input type="text" name="school2" id="school2" class="senior" placeholder="Senior High School">
-                        <input type="text" name="school3" id="school3" class="college" placeholder="College">
+                        <input type="text" name="senior" id="senior" class="senior" placeholder="Senior High School">
+                        <input type="text" name="college" id="college" class="college" placeholder="College">
                     </div>
                     </div>
 
