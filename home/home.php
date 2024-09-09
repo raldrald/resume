@@ -1,6 +1,3 @@
-<?php
-    require "../config.php";
-?>
 
 
 
@@ -9,49 +6,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../home/homestyle.css">
     <title>Document</title>
 </head>
 <body>
+        <?php
+             require "../config.php";
+        ?>
+
         <div class="navbar">
           <?php include "../index.php";?>
         </div>
         <div class="container">
         
             <div class="profilepic">
-            <p>Profile</p>
-
+            <?php
+             $sql = "SELECT * FROM tb_account";
+             $result = mysqli_query($conn,$sql);
+                while($row = mysqli_fetch_assoc($result)){
+                    echo '<img src="../images/' . $row['profilepic'] . '" alt="Profile Picture" width="200" height="200">';
+                }
+                ?>
+                
             </div>  
+
         <div class="info">
-                <p>name1</p>
-                <p>course</p>
-                <p>address</p>
-                <p>email</p>
-                <p>number</p>
+             <?php
+              $sql = "SELECT * FROM tb_account";
+              $result = mysqli_query($conn,$sql);
+             if($result ->num_rows>0){
+               while($row = $result->fetch_assoc()){
+             echo "<h2>";
+             echo "$row[fullname]";
+             echo "</h2>";
+             echo "<h3>";
+             echo "$row[course]";
+             echo "</h3>";
+             echo "<p>";
+             echo "$row[address]";
+             echo "</p>";
+             echo "<p>";
+             echo "$row[phonenumber]";
+             echo "</p>";
+               }
+            }
+             ?>
+             
             </div>
 
             <div class="objective">
-                <p>objective</p>
+                <H3 class="hobject">Objective</H3>
+                <?php
+              $sql = "SELECT * FROM tb_account";
+              $result = mysqli_query($conn,$sql);
+             if($result ->num_rows>0){
+               while($row = $result->fetch_assoc()){
+                echo "<p>";
+                echo "$row[objective]";
+                echo "</p>";
+               }
+            }
+            ?>
 
             </div>
             <div class="skill">
-                <p>skill</p>
+                <h3 class="hskill">Skill</h3>
+                <?php
+              $sql = "SELECT * FROM tb_account";
+              $result = mysqli_query($conn,$sql);
+             if($result ->num_rows>0){
+               while($row = $result->fetch_assoc()){
+                echo "<p>";
+                echo "$row[skill1]";
+                echo "</p>";
+                echo "<p>";
+                echo "$row[skill2]";
+                echo "</p>";
+                echo "<p>";
+                echo "$row[skill3]";
+                echo "</p>";
+                echo "<p>";
+                echo "$row[skill4]";
+                echo "</p>";
+                echo "<p>";
+                echo "$row[skill5]";
+                echo "</p>";
+
+               }
+            }
+            ?>
 
             </div>
             <div class="personal-info">
-                <p>age</p>
-                <p>birthday</p>
-                <p>place of birth</p>
-                <p>gender</p>
+                <h3 class="hpersonalinfo">Personal Information</h3>
+                <?php
+              $sql = "SELECT * FROM tb_account";
+              $result = mysqli_query($conn,$sql);
+             if($result ->num_rows>0){
+               while($row = $result->fetch_assoc()){
+                echo "<p>";
+                echo "Age: $row[age]";
+                echo "</p>";
+                echo "<p>";
+                $formatted_date = date('F d Y', strtotime($row['birthday']));
+                echo "Birthdate: $formatted_date";
+                echo "</p>";
+                echo "<p>";
+                echo "Place of Birth: $row[placeofbirth]";
+                echo "</p>";
+                echo "<p>";
+                echo "Gender: $row[gender]";
+                echo "</p>";
+               }
+            }
+            ?>
             </div>
             <div class="school">
-                <p>elem</p>
-                <p>jhs</p>
-                <p>shs</p>
-                <p>college</p>
+            <h3 class="hschool">Background Education</h3>
+            <?php
+              $sql = "SELECT * FROM tb_account";
+              $result = mysqli_query($conn,$sql);
+             if($result ->num_rows>0){
+               while($row = $result->fetch_assoc()){
+                echo "<p>";
+                echo "Elementary: $row[elementary]";
+                echo "</p>";
+                echo "<p>";
+                echo "Junior High School: $row[junior]";
+                echo "</p>";
+                echo "<p>";
+                echo "Senior High School: $row[senior]";
+                echo "</p>";
+                echo "<p>";
+                echo "College: $row[college]";
+                echo "</p>";
+               }
+            }
+            ?>
+            
 
             </div>
             </div>
+         
 </body>
 </html>

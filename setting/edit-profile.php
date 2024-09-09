@@ -7,15 +7,9 @@
             $profilepic = $_FILES['profilepic']['name'];
             $profilepic_tmp = $_FILES['profilepic']['tmp_name'];
 
-
-            $background = $_FILES['background']['name'];
-            $background_tmp = $_FILES['background']['tmp_name'];
-
             $profilepic_folder = '../images/'.$profilepic;
-            $background_folder = '../images/'.$background;
 
             move_uploaded_file($profilepic_tmp,$profilepic_folder);
-            move_uploaded_file($background_folder,$background_tmp);
 
 
             $fullname=$_POST['fullname'];
@@ -41,8 +35,8 @@
                 echo "<script>alert('Name, Course and Address Are Empty')</scirpt>";
             }
             else{
-                $sql = "INSERT INTO tb_account (profilepic,background,fullname,course,address,phonenumber,age,birthday,placeofbirth,gender,skill1,skill2,skill3,skill4,skill5,elementary,junior,senior,college,objective) values
-                  ('$profilepic','$background','$fullname','$course','$address','$phonenumber','$age','$birthday','$placeofbirth','$gender','$skill1','$skill2','$skill3','$skill4','$skill5','$elementary','$junior','$senior','$college','$objective')";
+                $sql = "INSERT INTO tb_account (profilepic,fullname,course,address,phonenumber,age,birthday,placeofbirth,gender,skill1,skill2,skill3,skill4,skill5,elementary,junior,senior,college,objective) values
+                  ('$profilepic','$fullname','$course','$address','$phonenumber','$age','$birthday','$placeofbirth','$gender','$skill1','$skill2','$skill3','$skill4','$skill5','$elementary','$junior','$senior','$college','$objective')";
                 $result = mysqli_query($conn,$sql);
 
                     if($result === true){
@@ -75,10 +69,6 @@
                     <div class="form-group">
                         <label for="profilepic" class="lprofilepic">Profile Picture</label>
                         <input type="file" name="profilepic" id="profilepic"  class="profilepic" placeholder="Profile Picture" accept=".jpg, .jpeg, .png">
-                    </div>
-                    <div class="form-group">
-                        <label for="background" class="lbackground">Background Picture</label>
-                        <input type="file" name="background" id="background"  class="background" placeholder="background" accept=".jpg, .jpeg, .png">
                     </div>
                     </div>
 
