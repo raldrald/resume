@@ -7,7 +7,7 @@
     <title>Account Edit</title>
 </head>
 <body>
-       <button><a href="edit-profile.php">Edit Profile</a></button>
+       <button><a href="edit-profile.php" >Edit Profile</a></button>
        <button><a href="update.php">Account Update</a></button>
        <button><a href="logout.php">Logout</a></button>    
 </body>

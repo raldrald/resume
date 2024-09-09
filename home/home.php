@@ -32,10 +32,23 @@
 
         <div class="info">
              <?php
-              $sql = "SELECT * FROM tb_account";
-              $result = mysqli_query($conn,$sql);
-             if($result ->num_rows>0){
-               while($row = $result->fetch_assoc()){
+             if (!isset($_SESSION['login'])) {
+                header('Location: ../login.php');
+                exit();
+            }
+        
+            if (isset($_GET['id'])) {
+                $user_id = $_GET['id'];
+        
+                $sql = "SELECT r.email, a.* 
+                        FROM tb_register r
+                        LEFT JOIN tb_account a ON r.id = a.register_id
+                        WHERE r.id='$user_id'";
+        
+                $result = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_array($result);
+        
+                if ($row) {
              echo "<h2>";
              echo "$row[fullname]";
              echo "</h2>";
@@ -57,10 +70,23 @@
             <div class="objective">
                 <H3 class="hobject">Objective</H3>
                 <?php
-              $sql = "SELECT * FROM tb_account";
-              $result = mysqli_query($conn,$sql);
-             if($result ->num_rows>0){
-               while($row = $result->fetch_assoc()){
+             if (!isset($_SESSION['login'])) {
+                header('Location: ../login.php');
+                exit();
+            }
+        
+            if (isset($_GET['id'])) {
+                $user_id = $_GET['id'];
+        
+                $sql = "SELECT r.email, a.* 
+                        FROM tb_register r
+                        LEFT JOIN tb_account a ON r.id = a.register_id
+                        WHERE r.id='$user_id'";
+        
+                $result = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_array($result);
+        
+                if ($row) {
                 echo "<p>";
                 echo "$row[objective]";
                 echo "</p>";
@@ -72,10 +98,23 @@
             <div class="skill">
                 <h3 class="hskill">Skill</h3>
                 <?php
-              $sql = "SELECT * FROM tb_account";
-              $result = mysqli_query($conn,$sql);
-             if($result ->num_rows>0){
-               while($row = $result->fetch_assoc()){
+             if (!isset($_SESSION['login'])) {
+                header('Location: ../login.php');
+                exit();
+            }
+        
+            if (isset($_GET['id'])) {
+                $user_id = $_GET['id'];
+        
+                $sql = "SELECT r.email, a.* 
+                        FROM tb_register r
+                        LEFT JOIN tb_account a ON r.id = a.register_id
+                        WHERE r.id='$user_id'";
+        
+                $result = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_array($result);
+        
+                if ($row) {
                 echo "<p>";
                 echo "$row[skill1]";
                 echo "</p>";
@@ -99,11 +138,25 @@
             </div>
             <div class="personal-info">
                 <h3 class="hpersonalinfo">Personal Information</h3>
+                <div class="p-pinfo">
                 <?php
-              $sql = "SELECT * FROM tb_account";
-              $result = mysqli_query($conn,$sql);
-             if($result ->num_rows>0){
-               while($row = $result->fetch_assoc()){
+             if (!isset($_SESSION['login'])) {
+                header('Location: ../login.php');
+                exit();
+            }
+        
+            if (isset($_GET['id'])) {
+                $user_id = $_GET['id'];
+        
+                $sql = "SELECT r.email, a.* 
+                        FROM tb_register r
+                        LEFT JOIN tb_account a ON r.id = a.register_id
+                        WHERE r.id='$user_id'";
+        
+                $result = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_array($result);
+        
+                if ($row) {
                 echo "<p>";
                 echo "Age: $row[age]";
                 echo "</p>";
@@ -121,13 +174,27 @@
             }
             ?>
             </div>
+            </div>
             <div class="school">
             <h3 class="hschool">Background Education</h3>
             <?php
-              $sql = "SELECT * FROM tb_account";
-              $result = mysqli_query($conn,$sql);
-             if($result ->num_rows>0){
-               while($row = $result->fetch_assoc()){
+             if (!isset($_SESSION['login'])) {
+                header('Location: ../login.php');
+                exit();
+            }
+        
+            if (isset($_GET['id'])) {
+                $user_id = $_GET['id'];
+        
+                $sql = "SELECT r.email, a.* 
+                        FROM tb_register r
+                        LEFT JOIN tb_account a ON r.id = a.register_id
+                        WHERE r.id='$user_id'";
+        
+                $result = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_array($result);
+        
+                if ($row) {
                 echo "<p>";
                 echo "Elementary: $row[elementary]";
                 echo "</p>";

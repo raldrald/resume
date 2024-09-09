@@ -139,9 +139,7 @@
                         <textarea  name="objective" id="objective" class="objective" placeholder="Objective" ></textarea>
                     </div>
 
-                    <button type="submit" name="submit">Submit</button>
-                
-                
+                    <button type="submit" id="sumbit-btn" name="submit">Submit</button>
             </form>
         </div>
     

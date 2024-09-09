@@ -14,15 +14,21 @@
                 $result = mysqli_query($conn,$sql);
                 $row = mysqli_fetch_array($result);
 
+                if($row){
                     if($password == $row['password']){
                         $_SESSION['login']=true;
                         $_SESSION['id'] = $row['id'];
+                        
                         header('Location: ../home/home.php?id='.$row['id'].'');
                     }
                     else{
-                        echo "<script>alert('ERROR')</script>";
+                        echo "<script>alert('Incorrect Password')</script>";
                     }
             }
+            else{
+                echo "<script>alert('User not found')</script>";
+            }
+        }
         }
 ?>
 
