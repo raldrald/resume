@@ -47,7 +47,7 @@
         <div class="navbar">
             <ul>
                 <li><a href="../resume/home/home.php">Home</a></li>
-                <li><a href="about.php">About Me</a></li>
+                <li><a href="../about/about.php">About Me</a></li>
                 <li><a href="../setting/setting.php">Setting</a></li>
                 <li><a href="contacts.php">Contact</a></li>
             </ul>

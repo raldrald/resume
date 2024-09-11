@@ -10,7 +10,7 @@
                 echo "<script>alert('Please fill in all fields')</script>";
             }
             else{
-                $sql = "SELECT * FROM tb_register WHERE email='$email'";
+                $sql = "SELECT * FROM tb_reg WHERE email='$email'";
                 $result = mysqli_query($conn,$sql);
                 $row = mysqli_fetch_array($result);
 

@@ -30,13 +30,14 @@
             $senior =$_POST['senior'];
             $college = $_POST['college'];
             $objective =$_POST['objective'];
+            $about =$_POST['about'];
 
             if(empty($fullname) || empty($course) || empty($address)){
                 echo "<script>alert('Name, Course and Address Are Empty')</scirpt>";
             }
             else{
-                $sql = "INSERT INTO tb_account (profilepic,fullname,course,address,phonenumber,age,birthday,placeofbirth,gender,skill1,skill2,skill3,skill4,skill5,elementary,junior,senior,college,objective) values
-                  ('$profilepic','$fullname','$course','$address','$phonenumber','$age','$birthday','$placeofbirth','$gender','$skill1','$skill2','$skill3','$skill4','$skill5','$elementary','$junior','$senior','$college','$objective')";
+                $sql = "INSERT INTO tb_acc (profilepic,fullname,course,address,phonenumber,age,birthday,placeofbirth,gender,skill1,skill2,skill3,skill4,skill5,elementary,junior,senior,college,objective,about) values
+                  ('$profilepic','$fullname','$course','$address','$phonenumber','$age','$birthday','$placeofbirth','$gender','$skill1','$skill2','$skill3','$skill4','$skill5','$elementary','$junior','$senior','$college','$objective','$about')";
                 $result = mysqli_query($conn,$sql);
 
                     if($result === true){
@@ -139,7 +140,16 @@
                         <textarea  name="objective" id="objective" class="objective" placeholder="Objective" ></textarea>
                     </div>
 
+                    <div class="habout">
+                        <h2>About Me</h2>
+                    </div>
+                    <div class="form-group">
+                        <textarea  name="about" id="about" class="about" placeholder="About Me" ></textarea>
+                    </div>
+
                     <button type="submit" id="sumbit-btn" name="submit">Submit</button>
+                    <button><a href="../home/home.php">Go Back</a></button>
+
             </form>
         </div>
     

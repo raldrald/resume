@@ -10,7 +10,7 @@
             if (empty($email) || empty($password) || empty($confirmpassword)) {
                 echo "<script>alert('Please fill in all fields.')</script>";
             } else {
-            $sql = "SELECT * FROM tb_register WHERE email = '$email'";
+            $sql = "SELECT * FROM tb_reg WHERE email = '$email'";
             $result = mysqli_query($conn,$sql);
 
             if($result -> num_rows >0){
@@ -18,7 +18,7 @@
             }
             else{
                 if($password == $confirmpassword){
-                    $query = "INSERT INTO tb_register (email,password,confirmpassword) VALUES ('$email','$password','$confirmpassword')";
+                    $query = "INSERT INTO tb_reg (email,password,confirmpassword) VALUES ('$email','$password','$confirmpassword')";
                     if(mysqli_query($conn,$query)){
                         $register_id = mysqli_insert_id($conn);
                         $_SESSION['register_id'] = $register_id;
