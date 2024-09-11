@@ -73,7 +73,7 @@ a:hover{
           <?php include "../index.php";?>
         </div>
         <div class="container">
-       <button><a href="edit-profile.php" >Edit Profile</a></button><br>
+       <button><a href="edit-profile.php">Edit Profile</a></button><br>
        <button><a href="update.php">Account Update</a></button><br>
        <button><a href="logout.php">Logout</a></button> <br>
        </div>   
